@@ -547,3 +547,56 @@ console.timeEnd('Hello')*/
 /***************************************************************************************/
 
 
+// //For Loop FIZZBUZZ
+// for(let i = 0; i < 22; i++){
+//     if(i % 3 == 0 && i % 5 == 0){
+//         console.log('FizzBuzz');
+//     } else if (i % 3 == 0) {
+//         console.log('Fizz');
+//     } else if (i % 5 == 0) {
+//         console.log('Buzz');
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// //While Loop
+// let i = 0;
+
+// while(i < 10){
+//     console.log(i);
+//     i++;
+// }
+
+// // Do While Loop - will always run at least once.
+// let x = 0;
+// do {
+//     console.log(`Number ${x}`);
+//     x++;
+// }
+// while(x < 10);
+
+
+// //Loop through ARRAY
+// const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+// for(let i = 0; i < cars.length; i++){
+//     console.log(cars[i]);
+// }
+
+// cars.forEach(function(car, numCar) {
+//     console.log(`${numCar} : ${car}`);
+// });
+
+// //Map
+// const users = [
+//     {id: 1, name: 'Sarah'},
+//     {id: 2, name: 'Abby'},
+//     {id: 3, name: 'Sam'}
+// ];
+
+// const ids = users.map(function(user){
+//     return user.id;
+// })
+
+// console.log(ids);
