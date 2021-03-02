@@ -218,100 +218,332 @@ console.timeEnd('Hello')*/
 /***************************************************************************************/
 
 
-const firstName = 'John';
-const age = 90;
-const job = 'Web Developer';
-const city = 'Miami';
-let html;
+// const firstName = 'John';
+// const age = 90;
+// const job = 'Web Developer';
+// const city = 'Miami';
+// let html;
 
-function hello(){
-    return 'hello';
-}
+// function hello(){
+//     return 'hello';
+// }
 
-// Without template strings (ES5)
-html = '<ul><li>Name: ' + firstName + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>Name: ' + city + '</li></ul>';
+// // Without template strings (ES5)
+// html = '<ul><li>Name: ' + firstName + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>Name: ' + city + '</li></ul>';
 
-html = '<ul>'+
-        '<li>Name: ' + firstName + '</li>' +
-        '<li>Age: ' + age + '</li>' +
-        '<li>Job: ' + job + '</li>' +
-        '<li>Name: ' + city + '</li>' +
-        '</ul>';
+// html = '<ul>'+
+//         '<li>Name: ' + firstName + '</li>' +
+//         '<li>Age: ' + age + '</li>' +
+//         '<li>Job: ' + job + '</li>' +
+//         '<li>Name: ' + city + '</li>' +
+//         '</ul>';
 
-// With template strings (ES6)
-html = `
-    <ul>
-        <li>Name: ${firstName}</li>
-        <li>Age: ${age}</li>
-        <li>Job: ${job}</li>
-        <li>City: ${city}</li>
-        <li>Four: ${2+2}</li>
-        <li>Hello: ${hello()}</li>
-        <li>${age >= 30 ? 'Old' : 'Young'}</li>
-    </ul>
-`;
+// // With template strings (ES6)
+// html = `
+//     <ul>
+//         <li>Name: ${firstName}</li>
+//         <li>Age: ${age}</li>
+//         <li>Job: ${job}</li>
+//         <li>City: ${city}</li>
+//         <li>Four: ${2+2}</li>
+//         <li>Hello: ${hello()}</li>
+//         <li>${age >= 30 ? 'Old' : 'Young'}</li>
+//     </ul>
+// `;
 
-document.body.innerHTML = html;
+// document.body.innerHTML = html;
 
 /***************************************************************************************/
 
 
-//Create some arrays
-const numbersOne = [43, 56, 33, 23, 44];
-const numbersTwo = new Array[43, 56, 33, 23, 44];
-const fruit = ['apple', 'butt', 'pizza', 'party'];
-const mixedTypeArray = [22, 'Hello', null, undefined, new Date()];
+// //Create some arrays
+// const numbersOne = [43, 56, 33, 23, 44];
+// const numbersTwo = new Array[43, 56, 33, 23, 44];
+// const fruit = ['apple', 'butt', 'pizza', 'party'];
+// const mixedTypeArray = [22, 'Hello', null, undefined, new Date()];
 
-let val;
+// let val;
 
-//Get array length
-val = numbersOne.length;
-//Check if something is an array;
-val = Array.isArray(numberOne); //returns a bool T or F if the thing is an array or not.
-//Get single value from array
-val = numbersOne[3];
-val = numbersOne[0]; // will give us the first thing in the array
-//Insert something into an array
-numbersOne[2] = 100; //this changes the value of the third thing to 100
-//Find the index of a value
-val = numbersOne.indexOf(33); // this will give us 2. 33 is at the 2 position
+// //Get array length
+// val = numbersOne.length;
+// //Check if something is an array;
+// val = Array.isArray(numberOne); //returns a bool T or F if the thing is an array or not.
+// //Get single value from array
+// val = numbersOne[3];
+// val = numbersOne[0]; // will give us the first thing in the array
+// //Insert something into an array
+// numbersOne[2] = 100; //this changes the value of the third thing to 100
+// //Find the index of a value
+// val = numbersOne.indexOf(33); // this will give us 2. 33 is at the 2 position
 
-//Mutating Arrays
-//Add to the end of array
-numbersOne.push(20);
-//Add to the front of array
-numbersOne.unshift(89);
-//Take off from the end of array
-numbersOne.pop();
-//Take off from the front
-numbersOne.shift();
-//Splice values 
-numbersOne.splice(1,3); //indexes - take out the values from index 1 to 3
-//Reverse the array
-numbersOne.reverse(); //reverses the order of the array
+// //Mutating Arrays
+// //Add to the end of array
+// numbersOne.push(20);
+// //Add to the front of array
+// numbersOne.unshift(89);
+// //Take off from the end of array
+// numbersOne.pop();
+// //Take off from the front
+// numbersOne.shift();
+// //Splice values 
+// numbersOne.splice(1,3); //indexes - take out the values from index 1 to 3
+// //Reverse the array
+// numbersOne.reverse(); //reverses the order of the array
 
-//Concatenate array
-val = numbersOne.concat(numbersTwo); // combines the two arrays
+// //Concatenate array
+// val = numbersOne.concat(numbersTwo); // combines the two arrays
 
-//Sorting arrays
-val = fruit.sort(); //sorts the string array in alpha order
-val = numbersOne.sort(); // sorts the numbers by the first digit
+// //Sorting arrays
+// val = fruit.sort(); //sorts the string array in alpha order
+// val = numbersOne.sort(); // sorts the numbers by the first digit
 
-//Sort number array
-val = numbersOne.sort(function(a, b){
-    return a - b;
-}); // Ascending
+// //Sort number array
+// val = numbersOne.sort(function(a, b){
+//     return a - b;
+// }); // Ascending
 
-val = numbersOne.sort(function(a, b){
-    return b - a;
-}); // Descending
+// val = numbersOne.sort(function(a, b){
+//     return b - a;
+// }); // Descending
 
-// Find
-function under50(num) {
-    return num < 50;
-}
+// // Find
+// function under50(num) {
+//     return num < 50;
+// }
 
-val = numbersOne.find(under50);
+// val = numbersOne.find(under50);
 
-console.log(numbersOne);
-console.log(val);
+// console.log(numbersOne);
+// console.log(val);
+
+/***************************************************************************************/
+
+
+// const person = {
+//     firstName: 'Steve',
+//     lastName: 'Smith',
+//     age: 34,
+//     email: 'steve@aol.com',
+//     hobbies: ['music', 'sports'],
+//     address: {
+//         city: 'Miami',
+//         state: 'FL'
+//     },
+//     getBirthYear: function(){
+//         return 2021 - this.age;
+//     }
+// }
+
+// let val;
+// val = person;
+
+// //Get specific value
+// val = person.firstName;
+// val = person['firstName'];
+// val = person.age;
+// val = person.address.city;
+// val = person.hobbies[1];
+// val = person.getBirthYear();
+
+// console.log(val);
+
+// const people = [
+//     {name: 'John', age: 30},
+//     {name: 'Mike', age: 32},
+//     {name: 'Nancy', age: 45}
+// ]
+
+// for(let i = 0; i < people.length; i++){
+//     console.log(people[i].name);
+// }
+
+/***************************************************************************************/
+
+
+// let val;
+
+// const today = new Date(); //if you don't give it a date, it returns today's date.
+// let birthday = new Date('2-3-1987')
+// birthday = new Date('October 12 1956');
+// birthday = new Date('3/8/1961')
+
+// val = birthday.getMonth(); // zero based index of month
+// val = birthday.getDate(); // returns the number of the day of the month
+// val = birthday.getFullYear();
+// val = birthday.getDay();
+
+// birthday.setMonth('11'); // changes the month to December.
+
+// console.log(birthday);
+
+/***************************************************************************************/
+
+
+// const id = '100';
+
+// //Equal to
+// if (id == 100){
+//     console.log('correct');
+// } else {
+//     console.log('incorrect');
+// }
+
+// // Not Equal to
+// if (id != 100){
+//     console.log('correct');
+// } else {
+//     console.log('incorrect');
+// }
+
+// // Test the type AND the value
+// if (id === 100){
+//     console.log('correct');
+// } else {
+//     console.log('incorrect');
+// }
+
+// if (id !== 100){
+//     console.log('correct');
+// } else {
+//     console.log('incorrect');
+// }
+
+// //Test if undefined
+// if(typeof id !== undefined){
+//     console.log(`The ID is ${id}`);
+// } else {
+//     console.log('No ID');
+// }
+
+// // Greater or Less than
+// if (id > 200){
+//     console.log('correct');
+// } else {
+//     console.log('incorrect');
+// }
+
+// //if else
+// const color = 'red';
+
+// if(color === 'red'){
+//     console.log('Color is red');
+// } else if (color === 'blue') {
+//     console.log('Color is blue');
+// } else {
+//     console.log('Color is not red or blue');
+// }
+
+// //logical operators
+// const firstName = 'Steve';
+// const age = 34;
+
+// // AND &&
+// if (age > 0 && age < 12){
+//     console.log(`${firstName} is a child.`);
+// } else if (age >= 13 && age <= 19){
+//     console.log(`${firstName} is a teenager.`);
+// } else {
+//     console.log(`${firstName} is an adult.`);
+// }
+
+// // OR ||
+// if (age < 16 || age > 65){
+//     console.log('They get a discount');
+// } else {
+//     console.log('They don\'t get a discount');
+// }
+
+// // Ternary operator
+// console.log(id === 100 ? 'correct' : 'incorrect');
+
+/***************************************************************************************/
+
+
+// //Switch cases
+
+// const color = 'blue';
+
+// switch (color) {
+//     case 'red':
+//         console.log('Color is red');
+//         break;
+//     case 'blue':
+//         console.log('Color is blue');
+//         break;
+//     default:
+//         console.log('Color is not red or blue');
+//         break;
+// }
+
+// let day;
+
+// switch (new Date().getDay()) {
+//     case 0:
+//         day = 'Sunday';
+//         break;
+//     case 1:
+//         day = 'Monday';
+//         break;
+//     case 2:
+//         day = 'Tuesday';
+//         break;
+//     case 3:
+//         day = 'Wednesday';
+//         break;
+//     case 4:
+//         day = 'Thursday';
+//         break;
+//     case 5:
+//         day = 'Friday';
+//         break;
+//     case 6:
+//         day = 'Saturday';
+//         break;
+// }
+
+// console.log(`Today is ${day}`);
+
+/***************************************************************************************/
+
+
+// // Function declarations
+
+// function greet(firstName = 'John', lastName = 'Doe'){
+//     //console.log('Hello');
+//     return 'Hello ' + firstName + ' ' + lastName;
+// } // can set defaults in params in case no params are passed
+
+// console.log(greet('John', 'Denver'));
+// console.log(greet()); //this will print the defaults - John Doe
+
+// //Function Expressions
+// const square = function(x = 3){
+//     return x * x;
+// }; // x = 3 sets the default if no params are passed.
+
+// console.log(square(8)); // prints 64.
+
+// //Immediately invokable function expressions - IIFEs
+// (function(){
+//     console.log('IIFE ran...');
+// })();
+
+// (function(name){
+//     console.log(`IIFE ran...Hello ${name}`);
+// })('Sarah');
+
+// //Property Method
+// const todo = {
+//     add: function(){
+//         console.log('Add todo...')
+//     },
+//     edit: function(id){
+//         console.log(`Edit todo ${id}`)
+//     }
+// }
+
+// todo.add();
+
+/***************************************************************************************/
+
+
