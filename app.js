@@ -600,3 +600,124 @@ console.timeEnd('Hello')*/
 // })
 
 // console.log(ids);
+
+/***************************************************************************************/
+
+
+// Window Methods / Objects / Properties
+
+//Alert
+//window.alert("hello dude");
+
+//Prompt
+// const input = prompt();
+// alert(input);
+
+//Confirm
+// if(confirm('Are you sure?')){
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+
+// let val;
+
+// //outer height and width
+// val = window.outerHeight;
+// val = window.outerWidth;
+
+// //inner height and width
+// val = window.innerWidth;
+// val = window.innerHeight;
+
+// //Scroll points
+// val = window.scrollY;
+// val = window.scrollX;
+
+// //Location Object
+// val = window.location;
+// val = window.location.hostname;
+// val = window.location.port;
+// val = window.location.href;
+
+//Redirect
+//window.location.href = 'http://braves.com'
+
+//Reload
+//window.location.reload();
+
+//History Object
+//  window.history.go(1);
+//  window.history.length;
+
+//Navigator Object
+// val = window.navigator;
+// val = window.navigator.platform;
+// val = window.navigator.vendor;
+// val = window.navigator.language; //en-US - not programming language
+
+// console.log(val);
+
+/***************************************************************************************/
+
+
+// //Global Scope
+
+// var a = 1;
+// let b = 2;
+// const c = 3;
+
+
+// function test() {
+//     //Function Scope
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Function Scope: ', a, b, c);
+// }
+
+// if(true){
+//     //Block Scope
+//     var a = 7;
+//     let b = 8;
+//     const c = 9;
+//     console.log('Block Scope: ', a, b, c);
+// }
+
+// test();
+
+// for(let a = 0; a < 10; a++) {
+//     console.log(a);
+// }
+
+// console.log('Global Scope: ', a, b, c);
+
+/***************************************************************************************/
+
+
+// let val;
+// val = document;
+// val = document.all;
+// val = document.all.length;
+// val = document.body;
+// val = document.URL;
+
+// val = document.forms[0]; //forms in html can be indexed
+// val = document.links; // get the links in the page - these can be called by index too
+// val = document.links[0].classList[0];
+// val = document.images;
+
+// let scripts = document.scripts;
+
+// //need to turn scripts into an array to use a forEach loop
+// let scriptsArr = Array.from(scripts);
+
+// scriptsArr.forEach(function(script){
+//     console.log(script.getAttribute('src'))
+// });
+
+// console.log(val);
+
+/***************************************************************************************/
+
+
